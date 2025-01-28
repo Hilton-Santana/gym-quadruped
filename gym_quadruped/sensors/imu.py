@@ -62,7 +62,7 @@ class IMU:
       # Build IMU frame w.r.t to the base frame
       # this is a geometric transformation from frame b 
       # to frame i
-      self.i_X_b = self._build_imu_frame()
+      self.b_X_i = self._build_imu_frame()
 
       # Turn off to inspect data
       self._show = False
@@ -113,7 +113,7 @@ class IMU:
     '''
     Get IMU frame w.r.t to the base frame
     '''
-    return self.i_X_b
+    return self.b_X_i
 
 #=============================================================================== 
   def prepare2show(self):
